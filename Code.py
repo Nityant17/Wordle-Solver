@@ -60,7 +60,9 @@ def word_finder(data, idx_char_pairs=None, exclude_letters=None, must_contain_le
 print("To start the game enter arose")
 guess = ['a','r','o','s','e']
 
-'''
+exclude_letters = []
+must_contain_letters = []
+forbidden_indices = {}
 for q in range(0,6):
     print("Enter colour for each letter by entering g, b or y for green, black or yellow")
     l=[]
@@ -86,11 +88,8 @@ for q in range(0,6):
     index_char_conditions = []
     for i in index_of_g:
         index_char_conditions.append((i,guess[i]))
-    exclude_letters = []
     for i in index_of_b:
         exclude_letters.append(guess[i])
-    must_contain_letters = []
-    forbidden_indices = {}
     for i in index_of_y:
         ind=[]
         must_contain_letters.append(guess[i])
@@ -117,59 +116,3 @@ for q in range(0,6):
         g.append(i)
     print(g)
     guess = g
-'''
-print("Enter colour for each letter by entering g, b or y for green, black or yellow")
-l=[]
-for i in range(0,5):
-    x = input("Enter colour:")
-    l.append(x)
-print(l)
-    
-index_of_g = []
-index_of_b = []
-index_of_y = []
-for i in range(len(l)):
-    if l[i] == 'g': 
-        index_of_g.append(i)
-    if l[i] == 'b': 
-        index_of_b.append(i)
-    if l[i] == 'y': 
-        index_of_y.append(i)
-print(index_of_g)
-print(index_of_b)
-print(index_of_y)
-    
-index_char_conditions = []
-for i in index_of_g:
-    index_char_conditions.append((i,guess[i]))
-exclude_letters = []
-for i in index_of_b:
-    exclude_letters.append(guess[i])
-must_contain_letters = []
-forbidden_indices = {}
-for i in index_of_y:
-    ind=[]
-    must_contain_letters.append(guess[i])
-    ind.append(i)
-    forbidden_indices[guess[i]] = ind
-print(index_char_conditions)
-print(exclude_letters)
-print(must_contain_letters)
-print(forbidden_indices)
-    
-# Find the second largest key based on all conditions
-second_word, second_largest_value = word_finder(
-    score,
-    idx_char_pairs=index_char_conditions,
-    exclude_letters=exclude_letters,
-    must_contain_letters=must_contain_letters,
-    forbidden_indices=forbidden_indices,
-    n=2
-)
-print(f"Second word: {second_word}, Value: {second_largest_value}")
-    
-g = []
-for i in second_word:
-    g.append(i)
-print(g)
-guess = g
