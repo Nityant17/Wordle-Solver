@@ -100,8 +100,8 @@ for q in range(0,6):
     print(must_contain_letters)
     print(forbidden_indices)
     
-    # Find the second largest key based on all conditions
-    second_largest_key, second_largest_value = get_nth_largest_key(
+    # Find the second word based on all conditions
+    second_word, second_largest_value = word_finder(
         score,
         idx_char_pairs=index_char_conditions,
         exclude_letters=exclude_letters,
@@ -109,10 +109,10 @@ for q in range(0,6):
         forbidden_indices=forbidden_indices,
         n=2
     )
-    print(f"Second largest key: {second_largest_key}, Value: {second_largest_value}")
+    print(f"Second word: {second_word}, Value: {second_largest_value}")
     
     g = []
-    for i in second_largest_key:
+    for i in second_word:
         g.append(i)
     print(g)
     guess = g
