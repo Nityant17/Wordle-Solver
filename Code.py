@@ -123,7 +123,7 @@ must_contain_letters = []
 forbidden_indices = {}
 m = 2
 for q in range(0,10):
-    print("Enter colour for each letter by entering g, b or y for green, black or yellow")
+    print("Enter colour for each letter by entering g, b or y for green, black or yellow and just press enter if word is not in wordle")
     l=[]
     for i in range(0,5):
         x = input("Enter colour:")
