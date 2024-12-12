@@ -7,7 +7,7 @@ for word in words.words():
         continue
     if len(word)==5:
         count = count+1
-        lst.ap
+        lst.append(word)
 # print(count)
 
 score = {}
