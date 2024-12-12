@@ -128,7 +128,7 @@ while c == 'c':
     g = []
     for i in next_word:
         g.append(i)
-    print(g)
+    # print(g)
     guess = g
     c = input("Enter c to continue and end to end:")
 
