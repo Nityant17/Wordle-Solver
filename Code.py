@@ -66,7 +66,8 @@ exclude_letters = []
 must_contain_letters = []
 forbidden_indices = {}
 m = 2
-for q in range(0,10):
+c = 'c'
+while c == 'c':
     print("Enter colour for each letter by entering g, b or y for green, black or yellow and just press enter if word is not in wordle")
     l=[]
     for i in range(0,5):
@@ -129,3 +130,5 @@ for q in range(0,10):
         g.append(i)
     print(g)
     guess = g
+    c = input("Enter c to continue and end to end:")
+
