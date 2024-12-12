@@ -73,7 +73,7 @@ while c == 'c':
     for i in range(0,5):
         x = input("Enter colour:")
         l.append(x)
-    print(l)
+    # print(l)
     
     index_of_g = []
     index_of_b = []
@@ -85,9 +85,9 @@ while c == 'c':
             index_of_b.append(i)
         if l[i] == 'y': 
             index_of_y.append(i)
-    print("green:",index_of_g)
-    print("black:",index_of_b)
-    print("yellow:",index_of_y)
+    # print("green:",index_of_g)
+    # print("black:",index_of_b)
+    # print("yellow:",index_of_y)
     
     for i in index_of_g:
         index_char_conditions.append((i,guess[i]))
@@ -100,10 +100,10 @@ while c == 'c':
         forbidden_indices[guess[i]].append(i)
     index_char_conditions = list(dict.fromkeys(index_char_conditions))
     must_contain_letters = list(dict.fromkeys(must_contain_letters))
-    print("Greened:",index_char_conditions)
-    print("Blacked:",exclude_letters)
-    print("Yellowed:",must_contain_letters)
-    print("Index of Yellow:",forbidden_indices)
+    # print("Greened:",index_char_conditions)
+    # print("Blacked:",exclude_letters)
+    # print("Yellowed:",must_contain_letters)
+    # print("Index of Yellow:",forbidden_indices)
     
     # Find the next word based on all conditions
     if l == ['', '', '', '', '']:
