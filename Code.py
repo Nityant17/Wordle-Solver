@@ -130,8 +130,11 @@ while c == 'c':
     # print(g)
     guess = g
     c = input("Enter c to continue and end to end:")
+    if c == "end":
+        break
     v = input("Did the previous word exist? y or n:")
     if v == 'n':
         m+=1
     elif v == 'y':
         m = 2
+print("Byeee...")
