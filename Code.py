@@ -1,4 +1,6 @@
-from nltk.corpus import words
+import nltk
+nltk.download('words')
+# from nltk.corpus import words
 
 count = 0
 lst = []
