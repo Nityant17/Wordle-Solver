@@ -52,6 +52,7 @@ must_contain_letters = []
 forbidden_indices = {}
 m = 2
 c = 'c'
+
 while c == 'c':
     v = input("Did the previous word exist? y or n:")
     if v == 'y':
